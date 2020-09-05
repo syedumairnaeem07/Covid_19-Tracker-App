@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	background: #f5f4fa;
+}
+/* Flex-box is a way to structure our websites easily. put into column or rows different elements  */
+/* grid vs flexbox......???? */
+.app__header {
+	display: flex; /*display: flex by default pushes everything in a row */
+	/* flex-direction: column; we can change the direction using flex-direction */
+	align-items: center; /*to align things horizontally. to give elements a nice look*/
+	justify-content: space-between; /*to create space between the children of the div. apply spacing b/w the children as much as it can*/
+	margin-bottom: 20px; /*tiny bit of margin so that anything underneath the header div stick to its bottom*/
+	/*Just for my understanding:margin creates space outside the element and padding creates space inside the element */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__header > h1 {
+	color: #fc3c3c;
+	font-size: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app__dropdown {
+	background: whitesmoke;
 }
 
-.App-link {
-  color: #61dafb;
+.app {
+	display: flex;
+	justify-content: space-evenly; /*create an even space between the contents*/
+	padding: 20px; /*to make space inside the element in order to create some space from the top*/
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__left {
+	flex: 0.9;
+}
+
+.app__graph {
+	flex-grow: 1;
+}
+
+.app__graphTitle {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.app__right {
+	display: flex;
+	flex-direction: column;
+}
+.app__right .MuiCardContent-root {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.app__stats {
+	display: flex;
+	justify-content: space-between;
+}
+/* @media is used to make sites responsive like when the max-width of side ends we shift elements accordingly */
+@media (max-width: 990px) {
+	.app {
+		flex-direction: column;
+	}
 }
