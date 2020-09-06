@@ -64,3 +64,24 @@ body {
 		flex-direction: column;
 	}
 }
+
+@media (max-width: 486px) {
+	.app__header {
+		flex-direction: column;
+	}
+	.app__header > h1 {
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 407px) {
+	.app__stats {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 334px) {
+	.app__header > h1 {
+		font-size: 1.5rem;
+	}
+}

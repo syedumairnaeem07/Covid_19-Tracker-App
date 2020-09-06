@@ -98,3 +98,15 @@
 	font-weight: 600 !important;
 	font-size: 1.2rem !important;
 }
+
+@media (max-width: 407px) {
+	.infoBox {
+		margin-right: 15px;
+	}
+	.infoBox--yellow{
+		margin-bottom: 15px;
+	}
+	.infoBox--green{
+		margin-bottom: 15px;
+	}
+}
