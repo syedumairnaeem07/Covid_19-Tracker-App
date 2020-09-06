@@ -66,7 +66,10 @@ function LineGraph({ casesType = "cases", ...props }) {
 	const [data, setData] = useState({});
 	let backgroundColor = "rgba(204, 16, 52, 0.5)";
 	let borderColor = "#CC1034";
-	if (casesType === "recovered") {
+	if (casesType === "cases") {
+		backgroundColor = "rgba(255, 255, 0, 0.5)";
+		borderColor = "#FFFF00";
+	} else if (casesType === "recovered") {
 		backgroundColor = "rgba(144, 238, 144, 0.5)";
 		borderColor = "#90EE90";
 	}

@@ -5,7 +5,7 @@ import "./Map.css";
 
 const casesTypeColors = {
 	cases: {
-		hex: "#CC1034",
+		hex: "#FFFF00",
 		multiplier: 800,
 	},
 	recovered: {

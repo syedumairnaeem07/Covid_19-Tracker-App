@@ -1,6 +1,7 @@
 .infoBox {
 	flex: 1; /*so the info Boxes can take as much room as they can*/
 	cursor: pointer;
+	border-radius: 1.5rem !important;
 }
 
 /* here is a rule that says implement the following
@@ -10,16 +11,73 @@
 	margin-right: 15px;
 }
 
-.infoBox--selected {
-	border-top: 10px solid greenyellow;
+.infoBox--selected.infoBox--green {
+	border-color: #75ce4c;
+	border-top-style: outset;
+}
+
+.infoBox.infoBox--selected.infoBox--green > :hover{
+	border-top-style: none;
+}
+
+.infoBox--selected.infoBox--yellow {
+	border-color: #e6ae47;
+	border-top-style: outset;
+}
+
+.infoBox.infoBox--selected.infoBox--yellow > :hover{
+	border-top-style: none;
+}
+
+.infoBox--selected.infoBox--red {
+	border-color: #d84d48;
+	border-top-style: outset;
+}
+
+.infoBox.infoBox--selected.infoBox--red > :hover{
+	border-top-style: none;
+}
+
+.infoBox.infoBox--green > :hover {
+	border-color: #75ce4c;
+	border-top-style: solid;
+}
+
+.infoBox.infoBox--yellow > :hover {
+	border-color: #e6ae47;
+	border-top-style: solid;
+}
+
+.infoBox.infoBox--red > :hover {
+	border-color: #d84d48;
+	border-top-style: solid;
 }
 
 .infoBox--red {
-	border-color: red;
+	/* border-color: #d84d48; */
+	background-color: #f8cecc !important;
+}
+
+.infoBox--green {
+	/* border-color: #75ce4c; */
+	background-color: #d5e8d4 !important;
+}
+
+.infoBox--yellow {
+	/* border-color: #e6ae47; */
+	background-color: #fde6cc !important;
+}
+
+.infoBox__cases--yellow {
+	color: rgb(189, 189, 22) !important;
 }
 
 .infoBox__cases--green {
-	color: lightgreen !important;
+	color: rgb(42, 219, 42) !important;
+}
+
+.infoBox__cases--red {
+	color: rgb(214, 48, 48) !important;
 }
 
 .infoBox__cases {
@@ -34,4 +92,9 @@
 	font-weight: 700 !important;
 	font-size: 0.8rem !important;
 	margin-top: 15px !important;
+}
+
+.infoBox__title {
+	font-weight: 600 !important;
+	font-size: 1.2rem !important;
 }

@@ -13,7 +13,7 @@
 
 .leaflet-container .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-	background: #e5e5e7;
+	background: whitesmoke;
 }
 
 .info-container {
@@ -33,6 +33,7 @@
 }
 
 .info-name {
+	margin-top: 8px;
 	font-size: 20px;
 	font-weight: bold;
 	color: #555;

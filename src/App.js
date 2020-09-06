@@ -82,7 +82,7 @@ function App() {
 				: `https://disease.sh/v3/covid-19/countries/${countryCode}`;
 		await fetch(url)
 			.then((response) => response.json())
-			.then((data) => {
+			.then(async (data) => {
 				setCountry(countryCode);
 				//Whole data is stored here
 				setCountryInfo(data);
@@ -94,10 +94,10 @@ function App() {
 						lng: -40.4796,
 					});
 				}
-				setMapZoom(4);
+				setMapZoom(3);
 			});
 	};
-	console.log(countryInfo);
+
 	return (
 		// BEM naming convention for className
 		// In BEM naming convention we name classes like: componentName(small letters)__Element(small letters).
@@ -129,14 +129,15 @@ function App() {
 				<div className="app__stats">
 					{/* info boxes same component but different values using props */}
 					<InfoBox
-						isRed
+						isYellow
 						active={casesType === "cases"}
 						onClick={(e) => setCasesType("cases")}
-						title="Coronavirus cases"
+						title="Cases"
 						cases={prettyPrintStat(countryInfo.todayCases)}
 						total={prettyPrintStat(countryInfo.cases)}
 					/>
 					<InfoBox
+						isGreen
 						active={casesType === "recovered"}
 						onClick={(e) => setCasesType("recovered")}
 						title="Recovered"

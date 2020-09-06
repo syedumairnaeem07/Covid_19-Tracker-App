@@ -1,7 +1,7 @@
 import React from "react";
 import "./Map.css";
 import { Map as LeafletMap, TileLayer } from "react-leaflet";
-import {showDataOnMap} from "./util";
+import { showDataOnMap } from "./util";
 
 function Map({ countries, casesType, center, zoom }) {
 	return (
@@ -12,7 +12,7 @@ function Map({ countries, casesType, center, zoom }) {
 					attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 				/>
 				{/* Loop through all the countries data and create circles according to the
-                numbers if the number is big the circle will be big and viceversa */}
+					numbers if the number is big the circle will be big and viceversa */}
 				{showDataOnMap(countries, casesType)}
 			</LeafletMap>
 		</div>
